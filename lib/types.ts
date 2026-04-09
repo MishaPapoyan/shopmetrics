@@ -62,3 +62,14 @@ export interface StatsCardData {
   changeLabel: string
   icon: string
 }
+
+export type NotificationType = 'order' | 'alert' | 'payment' | 'customer' | 'system'
+
+export interface Notification {
+  id: string
+  type: NotificationType
+  title: string
+  message: string
+  time: string
+  read: boolean
+}

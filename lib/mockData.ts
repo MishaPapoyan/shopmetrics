@@ -1,4 +1,4 @@
-import { Order, Customer, Product, MonthlyRevenue, WeeklyOrders, CategoryRevenue } from './types'
+import { Order, Customer, Product, MonthlyRevenue, WeeklyOrders, CategoryRevenue, Notification } from './types'
 
 export const orders: Order[] = [
   { id: '#ORD-001', customerId: 'c1', customerName: 'Sarah Johnson', product: 'MacBook Pro 14"', category: 'Electronics', date: '2026-04-07', amount: 2499.99, status: 'delivered' },
@@ -113,6 +113,65 @@ export const weeklyOrders: WeeklyOrders[] = [
   { week: 'Week 6', orders: 58, revenue: 25100 },
   { week: 'Week 7', orders: 82, revenue: 35600 },
   { week: 'Week 8', orders: 95, revenue: 41200 },
+]
+
+export const notifications: Notification[] = [
+  {
+    id: 'n1',
+    type: 'order',
+    title: 'New order received',
+    message: 'Sarah Johnson placed order #ORD-051 for $2,499.99',
+    time: '2 min ago',
+    read: false,
+  },
+  {
+    id: 'n2',
+    type: 'payment',
+    title: 'Payment successful',
+    message: 'Payment of $349.99 confirmed for #ORD-050',
+    time: '18 min ago',
+    read: false,
+  },
+  {
+    id: 'n3',
+    type: 'alert',
+    title: 'Low stock warning',
+    message: 'Resistance Bands Set has only 3 units remaining',
+    time: '1 hr ago',
+    read: false,
+  },
+  {
+    id: 'n4',
+    type: 'customer',
+    title: 'New customer registered',
+    message: 'Jordan Park joined and completed their first order',
+    time: '3 hr ago',
+    read: true,
+  },
+  {
+    id: 'n5',
+    type: 'alert',
+    title: 'Low stock warning',
+    message: 'Coffee Maker Pro is running low — 5 units left',
+    time: '5 hr ago',
+    read: true,
+  },
+  {
+    id: 'n6',
+    type: 'order',
+    title: 'Order cancelled',
+    message: 'Ethan Brooks cancelled order #ORD-012',
+    time: 'Yesterday',
+    read: true,
+  },
+  {
+    id: 'n7',
+    type: 'system',
+    title: 'Monthly report ready',
+    message: 'Your March 2026 revenue report is available to download',
+    time: '2 days ago',
+    read: true,
+  },
 ]
 
 export const categoryRevenue: CategoryRevenue[] = [
